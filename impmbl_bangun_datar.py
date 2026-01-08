@@ -1,63 +1,49 @@
-# ==========================================
-# APLIKASI EDUKASI IMPMBL
-# Hitung Luas & Keliling Bangun Datar
-# Bidang Pendidikan
-# ==========================================
+# =========================================
+# Program Hitung Luas dan Keliling Bangun Datar
+# Organisasi: IMPMBL
+# =========================================
 
-def luas_persegi(s):
-    return s * s
+def luas_persegi(sisi):
+    return sisi * sisi
 
-def keliling_persegi(s):
-    return 4 * s
+def keliling_persegi(sisi):
+    return 4 * sisi
 
-def luas_persegi_panjang(p, l):
-    return p * l
+def luas_persegi_panjang(panjang, lebar):
+    return panjang * lebar
 
-def keliling_persegi_panjang(p, l):
-    return 2 * (p + l)
-
+def keliling_persegi_panjang(panjang, lebar):
+    return 2 * (panjang + lebar)
 
 def menu():
     print("===================================")
-    print("IMPMBL")
-    print("Ikatan Montolutusan Pemuda Mahasiswa Banggai Laut")
-    print("Bidang Pendidikan")
+    print(" IMPIBL - Aplikasi Bangun Datar ")
     print("===================================")
-    print("1. Luas Persegi")
-    print("2. Keliling Persegi")
-    print("3. Luas Persegi Panjang")
-    print("4. Keliling Persegi Panjang")
-    print("5. Keluar")
+    print("1. Persegi")
+    print("2. Persegi Panjang")
+    print("3. Keluar")
 
-    pilih = input("Pilih menu (1-5): ")
+def main():
+    while True:
+        menu()
+        pilihan = input("Pilih menu (1/2/3): ")
 
-    if pilih == "1":
-        s = float(input("Masukkan sisi: "))
-        print("Hasil Luas:", luas_persegi(s))
+        if pilihan == "1":
+            sisi = float(input("Masukkan sisi: "))
+            print("Luas:", luas_persegi(sisi))
+            print("Keliling:", keliling_persegi(sisi))
 
-    elif pilih == "2":
-        s = float(input("Masukkan sisi: "))
-        print("Hasil Keliling:", keliling_persegi(s))
+        elif pilihan == "2":
+            p = float(input("Masukkan panjang: "))
+            l = float(input("Masukkan lebar: "))
+            print("Luas:", luas_persegi_panjang(p, l))
+            print("Keliling:", keliling_persegi_panjang(p, l))
 
-    elif pilih == "3":
-        p = float(input("Masukkan panjang: "))
-        l = float(input("Masukkan lebar: "))
-        print("Hasil Luas:", luas_persegi_panjang(p, l))
+        elif pilihan == "3":
+            print("Terima kasih - IMPMBL")
+            break
 
-    elif pilih == "4":
-        p = float(input("Masukkan panjang: "))
-        l = float(input("Masukkan lebar: "))
-        print("Hasil Keliling:", keliling_persegi_panjang(p, l))
+        else:
+            print("Pilihan tidak valid")
 
-    elif pilih == "5":
-        print("Terima kasih, Salam IMPMBL")
-        return
-
-    else:
-        print("Pilihan tidak valid")
-
-    print()
-    menu()
-
-
-menu()
+main()
