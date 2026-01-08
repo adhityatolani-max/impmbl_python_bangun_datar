@@ -18,7 +18,7 @@ st.markdown(
     """
     **Ikatan Montolutusan Pemuda Mahasiswa Banggai Laut (IMPMBL)**  
     Aplikasi ini digunakan untuk menghitung **luas** dan **keliling**
-    beberapa bangun datar.
+    beberapa bangun datar yang diperlukan untuk membangun ASRAMA BANGGAI LAUT.
     """
 )
 
